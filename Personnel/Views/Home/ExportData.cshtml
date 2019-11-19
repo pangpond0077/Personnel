@@ -1,0 +1,99 @@
+﻿
+
+
+@{
+    IEnumerable<SourceAutoComplete> sourceAutoCompletes = ViewData["SourceAutoCompletes"] as IEnumerable<SourceAutoComplete>;
+
+    ViewData["Title"] = "ExportData";
+}
+
+
+
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>@ViewData["Title"]</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label>หน่วยงาน : </label>
+
+                    <input id="joblist" name="site" value="@ViewBag.Site" autocomplete="off" class="typeahead_1 form-control" />
+
+                </div>
+            </div>
+
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label>วันที่ : </label>
+                    <div class="input-group date" id="dtp2">
+                        <input autocomplete="off" type="text" class="form-control" id="txtEnd" name="date2" value="@ViewBag.StartDate" />
+                        <span class="input-group-addon">
+                            <span class="fa fa-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label>ถึง : </label>
+                    <div class="input-group date" id="dtp1">
+                        <input autocomplete="off" type="text" class="form-control" id="txtStart" name="date1" value="@ViewBag.EndDate" />
+                        <span class="input-group-addon">
+                            <span class="fa fa-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary dim btn-dim" type="button" onclick="SearchData();"><i class="fa fa-search"></i> Export</button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+    var WebModels = @Html.Raw(Json.Serialize(sourceAutoCompletes));
+      //  var str = JSON.stringify(WebModels);
+        //console.log(JSON.stringify(WebModels));
+
+    console.log(WebModels);
+       $('.typeahead_1').typeahead({
+                source: WebModels
+            });
+
+    </script>
+
+    <script>
+        $('#dtp1,#dtp2').datetimepicker({
+            format: 'DD/MM/YYYY',
+        });
+    </script>
+<script>
+    function SearchData() {
+        
+        var start=  document.getElementById("txtEnd").value;
+        var end = document.getElementById("txtStart").value;
+        var site = document.getElementById("joblist").value;
+
+ 
+        url= "CreateFile/?site=" + site + "&date1=" + start + "&date2=" + end;
+        window.location.href = url;
+
+                        
+                           
+
+    }
+</script>
+
+}

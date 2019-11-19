@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Personnel</title>
+
+    <link rel="stylesheet" type="text/css" href="~/lib_bower/bootstrap/dist/css/bootstrap.css">
+
+
+    <link rel="stylesheet" type="text/css" href="~/plugins/jquery-ui-1.12.1/jquery-ui.css" />
+
+
+    <link href="~/lib_bower/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/iCheck/custom.css" />
+
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/steps/jquery.steps.css" />
+    <!-- Toastr style -->
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/toastr/toastr.min.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/jQueryUI/jquery-ui-1.10.4.custom.min.css" />
+
+
+    <!-- Date Picker -->
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="~/plugins/DateTimePicker/bootstrap-datetimepicker.min.css">
+
+    <!-- Daterange picker -->
+    <link rel="stylesheet" type="text/css" href="~/lib_bower/daterangepicker/daterangepicker.css" />
+
+
+
+
+
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" type="text/css" href="~/lib_bower/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.css">
+
+    <!--Modall-->
+    <link rel="stylesheet" type="text/css" href="~/plugins/Modaal/dist/css/modaal.css" />
+
+    <!--Datatable-->
+    <link rel="stylesheet" type="text/css" href="~/lib_bower/datatables.net-dt/css/jquery.dataTables.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib_bower/datatables.net-autofill-dt/css/autoFill.dataTables.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib_bower/datatables.net-buttons-dt/css/buttons.dataTables.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib_bower/datatables.net-colreorder-dt/css/colReorder.dataTables.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib_bower/datatables.net-fixedcolumns-dt/css/fixedColumns.dataTables.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib_bower/datatables.net-fixedheader-dt/css/fixedHeader.dataTables.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib_bower/datatables.net-keytable-dt/css/keyTable.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib_bower/datatables.net-responsive-dt/css/responsive.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib_bower/datatables.net-rowgroup-dt/css/rowGroup.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib_bower/datatables.net-rowreorder-dt/css/rowReorder.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib_bower/datatables.net-scroller-dt/css/scroller.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib_bower/datatables.net-select-dt/css/select.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/plugins/DatatableSearchPanel/dataTables.searchPane.min.css" />
+
+
+
+    <!-- Step-->
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/steps/jquery.steps.css">
+
+    <!-- fullCalendar -->
+    <link rel="stylesheet" type="text/css" href="~/plugins/fullcalendar/dist/fullcalendar.css">
+    <link rel="stylesheet" type="text/css" href="~/plugins/fullcalendar/dist/fullcalendar.print.min.css" media="print">
+
+
+    <link rel="stylesheet" href="~/plugins/select2/dist/css/select2.min.css" />
+    <link rel="stylesheet" href="~/plugins/select2/dist/css/select2.css" />
+
+    <link href="~/css/animate.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+
+</head>
+<body style="background-color:white">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Personnel</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ExportData">ExportData</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2019 - Personnel - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+
+    <!-- jQuery 3 -->
+    <script src="~/lib_bower/jquery/dist/jquery.js"></script>
+
+    <!-- jQuery UI 1.11.4 -->
+    <script src="~/js/popper.min.js"></script>
+
+
+    <script src="~/plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script>
+        $.widget.bridge('uibutton', $.ui.button);
+    </script>
+
+
+    <script src="~/plugins/JqueryUIContextMenu/jquery.ui-contextmenu.min.js"></script>
+
+
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/lib/@@aspnet/signalr/dist/browser/signalr.js"></script>
+    <!-- daterangepicker -->
+
+    <script src="~/lib_bower/moment/min/moment.min.js"></script>
+    <script src="~/lib_bower/daterangepicker/daterangepicker.js"></script>
+
+
+
+    <script src="~/plugins/DateTimePicker/bootstrap-datetimepicker.min.js"></script>
+
+
+    <!---Set PDF MAKER-->
+    <script src='~/pdfmake/build/pdfmake.js'></script>
+    <script src='~/pdfmake/build/vfs_fonts.js'></script>
+
+
+    <script src="~/lib_bower/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="~/lib_bower/datatables.net-buttons/js/dataTables.buttons.js"></script>
+    <script src="~/lib_bower/datatables.net-buttons/js/buttons.colVis.js"></script>
+    <script src="~/lib_bower/datatables.net-buttons/js/buttons.html5.js"></script>
+    <script src="~/lib_bower/datatables.net-buttons/js/buttons.print.js"></script>
+    <script src="~/lib_bower/datatables.net-buttons/js/buttons.flash.js"></script>
+    <script src="~/lib_bower/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/lib_bower/datatables.net-colreorder/js/dataTables.colReorder.min.js"></script>
+    <script src="~/lib_bower/datatables.net-fixedcolumns/js/dataTables.fixedColumns.min.js"></script>
+    <script src="~/lib_bower/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="~/lib_bower/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="~/lib_bower/datatables.net-rowgroup/js/dataTables.rowGroup.min.js"></script>
+    <script src="~/lib_bower/datatables.net-rowreorder/js/dataTables.rowReorder.min.js"></script>
+    <script src="~/lib_bower/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="~/lib_bower/datatables.net-select/js/dataTables.select.min.js"></script>
+    <script src="~/plugins/DatatableSearchPanel/dataTables.searchPane.min.js"></script>
+
+
+
+
+
+
+    <script src="~/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="~/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Steps -->
+    <script src="~/js/plugins/steps/jquery.steps.min.js"></script>
+
+    <!--Modaal-->
+    <script src="~/plugins/Modaal/dist/js/modaal.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="~/js/inspinia.js"></script>
+    <script src="~/js/plugins/pace/pace.min.js"></script>
+
+    <!-- Toastr -->
+    <script src="~/js/plugins/toastr/toastr.min.js"></script>
+
+
+    <!-- iCheck -->
+    <script src="~/js/plugins/iCheck/icheck.min.js"></script>
+
+    <script src="~/lib_bower/bahttext/src/index.js"></script>
+
+    <!-- selectable-->
+    <script src="~/plugins/select2/dist/js/select2.min.js"></script>
+    <script src="~/plugins/select2/dist/js/select2.js"></script>
+    <script src="~/plugins/select2/dist/js/select2.full.min.js"></script>
+    <script src="~/plugins/select2/dist/js/select2.full.js"></script>
+
+    <script src="~/js/plugins/typehead/bootstrap3-typeahead.min.js"></script>
+
+    <!-- Idle Timer plugin -->
+    <script src="~/js/plugins/idle-timer/idle-timer.min.js"></script>
+    <link href="~/css/bootstrap-glyphicons.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="~/plugins/Chart.js/Chart.bundle.js"></script>
+    <script src="~/plugins/Chart.js/Chart.js"></script>
+
+    <!--Fullcalendar-->
+    <script src="~/plugins/fullcalendar/dist/fullcalendar.min.js"></script>
+
+    <!-- Steps -->
+    <script src="~/js/plugins/steps/jquery.steps.min.js"></script>
+
+    <!-- Jquery Validate -->
+    <script src="~/js/plugins/validate/jquery.validate.min.js"></script>
+
+
+
+
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+    <script>
+        $(function () {
+            pdfMake.fonts = {
+                THSarabun: {
+                    normal: 'THSarabun.ttf',
+                    bold: 'THSarabun Bold.ttf',
+                    italics: 'THSarabun Italic.ttf',
+                    bolditalics: 'THSarabun BoldItalic.ttf'
+                },
+                Roboto: {
+                    normal: 'Roboto-Regular.ttf',
+                    bold: 'Roboto-Medium.ttf',
+                    italics: 'Roboto-Italic.ttf',
+                    bolditalics: 'Roboto-MediumItalic.ttf'
+                }
+            }
+        });
+
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

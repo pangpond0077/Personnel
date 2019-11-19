@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/ -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en-US" prefix="og: http://ogp.me/ns#"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.talkingdotnet.com/xmlrpc.php">
+<meta name="indiblogger-blog-verification" content="IB-3b9028a6523165dbdb9b14957c458032">
+<meta name="blogcatalog" content="9BC10966160">
+<title>Uploading Multiple Files in ASP.NET Core Razor Pages</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v4.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Find out solution for Uploading Multiple Files in ASP.NET Core Razor Pages. This solution also works for ASP.NET Core 2.0 MVC projects.">
+<meta name="robots" content="noodp">
+<link rel="canonical" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Uploading Multiple Files in ASP.NET Core Razor Pages #aspnetcore">
+<meta property="og:description" content="Find out solution for Uploading Multiple Files in ASP.NET Core Razor Pages. This solution also works for ASP.NET Core 2.0 MVC projects.">
+<meta property="og:url" content="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/">
+<meta property="og:site_name" content="Talking Dotnet">
+<meta property="article:publisher" content="https://www.facebook.com/talkingdotnet/">
+<meta property="article:author" content="https://www.facebook.com/talkingdotnet">
+<meta property="article:tag" content="ASP.NET Core 2.0">
+<meta property="article:tag" content="Razor Pages">
+<meta property="article:section" content="ASP.NET Core">
+<meta property="article:published_time" content="2017-11-06T22:37:59+05:30">
+<meta property="og:image" content="https://www.talkingdotnet.com/wp-content/uploads/2017/11/Uploading-Multiple-Files-in-ASPNET-Core-Razor-Pages.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="Find out solution for Uploading Multiple Files in ASP.NET Core Razor Pages. This solution also works for ASP.NET Core 2.0 MVC projects.">
+<meta name="twitter:title" content="Uploading Multiple Files in ASP.NET Core Razor Pages #aspnetcore">
+<meta name="twitter:site" content="@talkingdotnet">
+<meta name="twitter:image" content="https://www.talkingdotnet.com/wp-content/uploads/2017/11/Uploading-Multiple-Files-in-ASPNET-Core-Razor-Pages.jpg">
+<meta name="twitter:creator" content="@talkingdotnet">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Talking Dotnet » Feed" href="https://www.talkingdotnet.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Talking Dotnet » Comments Feed" href="https://www.talkingdotnet.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Talking Dotnet » Uploading Multiple Files in ASP.NET Core Razor Pages Comments Feed" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/feed/">
+		<script async="" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/analytics.js.ดาวน์โหลด"></script><script src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/osd.js.ดาวน์โหลด"></script><script async="" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/5a82d2d7d4d59e0012e89983.js.ดาวน์โหลด"></script><script src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/ca-pub-4919054269980932.js.ดาวน์โหลด"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/www.talkingdotnet.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.18"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/wp-emoji-release.min.js.ดาวน์โหลด" type="text/javascript"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<!-- `jetpack_related-posts` is included in the concatenated jetpack.css -->
+<link rel="stylesheet" id="wpctc_wpctc-css" href="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/wpctc.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="sparkling-bootstrap-css" href="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="sparkling-icons-css" href="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="sparkling-fonts-css" href="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="sparkling-style-css" href="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/style.css" type="text/css" media="all">
+<!-- `sharedaddy` is included in the concatenated jetpack.css -->
+<link rel="stylesheet" id="social-logos-css" href="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/social-logos.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/jetpack.css" type="text/css" media="all">
+<script>if (document.location.protocol != "https:") {document.location = document.URL.replace(/^http:/i, "https:");}</script><script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/jquery.js.ดาวน์โหลด"></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/jquery-migrate.min.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/related-posts.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/modernizr.min.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/bootstrap.min.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/functions.min.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/sharethis.js.ดาวน์โหลด" defer="" onload=""></script>
+<link rel="https://api.w.org/" href="https://www.talkingdotnet.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.talkingdotnet.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.talkingdotnet.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.4.18">
+<link rel="shortlink" href="https://wp.me/p72h6z-1kT">
+<link rel="alternate" type="application/json+oembed" href="https://www.talkingdotnet.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.talkingdotnet.com%2Fuploading-multiple-files-asp-net-core-razor-pages%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.talkingdotnet.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.talkingdotnet.com%2Fuploading-multiple-files-asp-net-core-razor-pages%2F&amp;format=xml">
+
+<link rel="dns-prefetch" href="https://v0.wordpress.com/">
+<style type="text/css">img#wpstats{display:none}</style><style type="text/css"><br />
+<b>Notice</b>:  Undefined index: face in <b>/home/talki17i/public_html/wp-content/themes/sparkling/inc/extras.php</b> on line <b>304</b><br />
+<br />
+<b>Notice</b>:  Undefined index:  in <b>/home/talki17i/public_html/wp-content/themes/sparkling/inc/extras.php</b> on line <b>304</b><br />
+<br />
+<b>Notice</b>:  Undefined index: style in <b>/home/talki17i/public_html/wp-content/themes/sparkling/inc/extras.php</b> on line <b>304</b><br />
+<br />
+<b>Notice</b>:  Undefined index: color in <b>/home/talki17i/public_html/wp-content/themes/sparkling/inc/extras.php</b> on line <b>304</b><br />
+.entry-content {font-family: ; font-size:15px; font-weight: ; color:;}</style><link rel="stylesheet" type="text/css" href="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/shCore.css"><link rel="stylesheet" type="text/css" href="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/shThemeEmacs.css"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<link rel="icon" href="https://www.talkingdotnet.com/wp-content/uploads/2015/12/Favicon.png" sizes="32x32">
+<link rel="icon" href="https://www.talkingdotnet.com/wp-content/uploads/2015/12/Favicon.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://www.talkingdotnet.com/wp-content/uploads/2015/12/Favicon.png">
+<meta name="msapplication-TileImage" content="https://www.talkingdotnet.com/wp-content/uploads/2015/12/Favicon.png">
+
+<style id="custom-css-css">.sd-sharing{border:1px solid maroon;background-color:#ffffe0;text-align:center}div.sharedaddy h3.sd-title:before{border-top:none;margin-bottom:.8em}div.sharedaddy h3.sd-title{margin:0 0 1em;font-size:14pt;display:block;line-height:.5;font-weight:700}#jp-relatedposts{padding-top:0;margin:.5em 0;text-align:center;border:1px solid #000;background-color:#f5fffa}#jp-relatedposts h3.jp-relatedposts-headline{font-size:12pt;border-bottom:1px solid #000;background:#DA4453 !important;padding:5px;color:#fff;float:none;display:block}#jp-relatedposts h3.jp-relatedposts-headline em:before{display:none}#jp-relatedposts .jp-relatedposts-items-visual{padding:3px}#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a{font-weight:700 !important}#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date{display:none}pre{font-size:.85em !important;color:#adff2f !important;background-color:#000 !important;border:1px solid #fff !important}@media (min-width: 1200px){.container{width:95%}.main-content-inner.col-sm-12.col-md-8{width:70%}.full-width .main-content-inner.col-sm-12.col-md-8{width:100% !important}#secondary.widget-area.col-sm-12.col-md-4{width:30%}}.single-featured{display:none !important}#logo img{width:380px !important}@media (min-width: 300px) and (max-width: 479px){#logo img{width:200px !important}.entry-title{font-size:30px !important;line-height:40px !important;margin-bottom:0 !important}}.navbar-default .navbar-nav>li>a{text-transform:none !important;padding-left:10px;padding-right:10px}.lcp_catlist{font-size:20px;line-height:50px;font-weight:600}</style>
+<script async="" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/f(7).txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4919054269980932",
+    enable_page_level_ads: true
+  });
+</script>
+<link rel="preload" href="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/f(8).txt" as="script"><script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/f(8).txt"></script><link rel="preload" href="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/f(9).txt" as="script"><script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/f(9).txt"></script><link rel="preload" href="https://pagead2.googlesyndication.com/pagead/js/r20190403/r20190131/show_ads_impl.js" as="script"><script type="text/javascript">
+(function() {
+	(function (i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+		a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', 'https://google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-71398252-1', 'auto');
+			ga('send', 'pageview');
+	})();
+
+</script></head>
+
+<body data-rsssl="1" class="single single-post postid-5139 single-format-standard">
+<a class="sr-only sr-only-focusable" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/#content">Skip to main content</a>
+<div id="page" class="hfeed site">
+
+	<header id="masthead" class="site-header" role="banner" style="margin-bottom: 76px;">
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="site-navigation-inner col-sm-12">
+						<div class="navbar-header">
+							<button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+
+							
+							<div id="logo">
+								<a href="https://www.talkingdotnet.com/"><img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/Drawing.png" height="70" width="481" alt="Talking Dotnet"></a>
+							</div><!-- end of #logo -->
+
+							
+							
+						</div>
+						<div class="collapse navbar-collapse navbar-ex1-collapse"><ul id="menu-top" class="nav navbar-nav"><li id="menu-item-221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-221 dropdown"><a title="Categories" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/#" data-toggle="dropdown" class="dropdown-toggle">Categories <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-6467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6467 dropdown"><a title="ASP.NET Core" href="https://www.talkingdotnet.com/asp-net-core-post/">ASP.NET Core</a></li>
+	<li id="menu-item-6468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6468"><a title="Angular" href="https://www.talkingdotnet.com/angular-post/">Angular</a></li>
+	<li id="menu-item-922" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-922"><a title="ASP.NET MVC" href="https://www.talkingdotnet.com/asp-net-mvc/">ASP.NET MVC</a></li>
+	<li id="menu-item-1885" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1885"><a title="Entity Framework" href="https://www.talkingdotnet.com/entity-framework/">Entity Framework</a></li>
+	<li id="menu-item-1570" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1570"><a title="Web API" href="https://www.talkingdotnet.com/web-api/">Web API</a></li>
+</ul>
+</li>
+<li id="menu-item-225" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-225 dropdown"><a title="Interview Questions" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/#" data-toggle="dropdown" class="dropdown-toggle">Interview Questions <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-1230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1230"><a title="ASP.NET Core" href="https://www.talkingdotnet.com/asp-net-core-interview-questions/">ASP.NET Core</a></li>
+	<li id="menu-item-2608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2608"><a title="Angular 2" href="https://www.talkingdotnet.com/difference-between-angular-1-x-and-angular-2/">Angular 2</a></li>
+	<li id="menu-item-1912" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1912"><a title="Entity Framework Core" href="https://www.talkingdotnet.com/entity-framework-core-interview-questions/">Entity Framework Core</a></li>
+	<li id="menu-item-369" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-369"><a title="TypeScript" href="https://www.talkingdotnet.com/typescript-interview-questions/">TypeScript</a></li>
+</ul>
+</li>
+<li id="menu-item-7504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7504"><a title="Recommended Books" href="https://www.talkingdotnet.com/recommended-books/">Recommended Books</a></li>
+</ul></div>					</div>
+				</div>
+			</div>
+		</nav><!-- .site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+		<div class="top-section">
+								</div>
+
+		<div class="container main-content-area">
+            			<div class="row side-pull-left">
+				<div class="main-content-inner col-sm-12 col-md-8">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		<div class="code-block code-block-1" style="margin: 8px 0; clear: both;">
+<script async="" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/f(7).txt"></script>
+<!-- Top 728 -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4919054269980932" data-ad-slot="7125093403" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0px;width:728px;height:90px;" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/saved_resource(3).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<style>.bmc-button img{box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{text-decoration: none !important;display:inline-block !important;padding:1px 25px !important;color:#000000 !important;background-color:#FFDD00 !important;border-radius: 3px !important;border: 1px solid transparent !important;font-size: 36px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;-webkit-transition: 0.3s all linear !important;transition: 0.3s all linear !important;margin: 0 auto !important;font-family:"Cookie", cursive !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0 4px 16px 0 rgba(190, 190, 190,.45) !important;text-decoration: none !important;box-shadow: 0 4px 16px 0 rgba(190, 190, 190,.45) !important;opacity: 0.85 !important;color:#000000 !important;}</style><link href="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/css(1)" rel="stylesheet">
+<div style="float:right;display:none;" id="dvBuyMe">
+<a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/talkingdotnet"><img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/BMC-btn-logo.svg" alt=""><span style="margin-left:5px">Buy me a coffee</span></a></div>
+
+</div>
+
+			
+<article id="post-5139" class="post-5139 post type-post status-publish format-standard has-post-thumbnail hentry category-asp-net-core-1-0 tag-asp-net-core-2-0 tag-razor-pages">
+	<img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/1x1.trans.gif" data-lazy-src="https://www.talkingdotnet.com/wp-content/uploads/2017/11/Uploading-Multiple-Files-in-ASPNET-Core-Razor-Pages.jpg" width="750" height="410" class="single-featured wp-post-image" alt="Uploading Multiple Files in ASPNET Core Razor Pages" srcset="https://www.talkingdotnet.com/wp-content/uploads/2017/11/Uploading-Multiple-Files-in-ASPNET-Core-Razor-Pages-300x164.jpg 300w, https://www.talkingdotnet.com/wp-content/uploads/2017/11/Uploading-Multiple-Files-in-ASPNET-Core-Razor-Pages.jpg 750w" sizes="(max-width: 750px) 100vw, 750px"><noscript><img width="750" height="410" src="https://www.talkingdotnet.com/wp-content/uploads/2017/11/Uploading-Multiple-Files-in-ASPNET-Core-Razor-Pages.jpg" class="single-featured wp-post-image" alt="Uploading Multiple Files in ASPNET Core Razor Pages" srcset="https://www.talkingdotnet.com/wp-content/uploads/2017/11/Uploading-Multiple-Files-in-ASPNET-Core-Razor-Pages-300x164.jpg 300w, https://www.talkingdotnet.com/wp-content/uploads/2017/11/Uploading-Multiple-Files-in-ASPNET-Core-Razor-Pages.jpg 750w" sizes="(max-width: 750px) 100vw, 750px" /></noscript>	<div class="post-inner-content">
+		<header class="entry-header page-header">
+
+			<h1 class="entry-title ">Uploading Multiple Files in ASP.NET Core Razor Pages</h1>
+
+			<div class="entry-meta">
+				<span class="posted-on"><i class="fa fa-calendar"></i> <a href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/" rel="bookmark"><time class="entry-date published" datetime="2017-11-06T22:37:59+00:00">November 6, 2017</time></a></span><span class="byline"> <i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="https://www.talkingdotnet.com/author/talkingdotnet/">Talking Dotnet</a></span></span>
+								<span class="cat-links"><i class="fa fa-folder-open-o"></i>
+					 <a href="https://www.talkingdotnet.com/asp-net-core-1-0/" rel="category tag">ASP.NET Core</a>				</span>
+								
+			</div><!-- .entry-meta -->
+		</header><!-- .entry-header -->
+
+		<div class="entry-content">
+			<p>If you are a fan of ASP.NET Web forms and miss them, ASP.NET Core <a href="https://www.talkingdotnet.com/tag/razor-pages/"><u>Razor Pages</u></a> gives you the exact same feeling of ASP.NET Web forms. <a href="https://www.talkingdotnet.com/tag/razor-pages/"><u>Razor Pages</u></a> are a new feature of <a href="https://www.talkingdotnet.com/tag/asp-net-core-2-0/"><u>ASP.NET Core 2.0</u></a> that makes coding page-focused scenarios easier and more productive. Razor Pages are introduced with the intent of creating page focused scenarios where there is no real logic is involved. This short post talks about the solution for uploading multiple files in ASP.NET Core Razor Pages using jQuery and Ajax.<span id="more-5139"></span></p>
+<h2 style="font-size:24px;">Uploading Multiple Files in ASP.NET Core Razor Pages</h2>
+<p>Let’s create an ASP.NET Core Razor Page application. You should see the following dialog box when you create a new ASP.NET Core web application.</p>
+<p><a href="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/Create-new-Razor-Page-application.png" rel="attachment wp-att-5151"><img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/Create-new-Razor-Page-application.png" alt="Create new Razor Page application" width="583" height="425" class="aligncenter size-full wp-image-5151" srcset="https://www.talkingdotnet.com/wp-content/uploads/2017/11/Create-new-Razor-Page-application-300x219.png 300w, https://www.talkingdotnet.com/wp-content/uploads/2017/11/Create-new-Razor-Page-application.png 583w" sizes="(max-width: 583px) 100vw, 583px" data-lazy-loaded="true" style="display: block;"><noscript><img src="https://www.talkingdotnet.com/wp-content/uploads/2017/11/Create-new-Razor-Page-application.png" alt="Create new Razor Page application" width="583" height="425" class="aligncenter size-full wp-image-5151" srcset="https://www.talkingdotnet.com/wp-content/uploads/2017/11/Create-new-Razor-Page-application-300x219.png 300w, https://www.talkingdotnet.com/wp-content/uploads/2017/11/Create-new-Razor-Page-application.png 583w" sizes="(max-width: 583px) 100vw, 583px" /></noscript></a> If you are not seeing this, then update your Visual Studio 2017 and install .NET Core 2.0 from <a href="https://www.microsoft.com/net/download/windows"><u>here</u></a>. </p>
+<p>Let’s take a look at the HTML code (.cshtml) first. The HTML code contains an input type file control and a button. The file input control has an attribute named <code>multiple</code> as we need to support selection of multiple files.</p>
+<div><div id="highlighter_471363" class="syntaxhighlighter  csharp"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp plain">&lt;form method=</code><code class="csharp string">"post"</code> <code class="csharp plain">enctype=</code><code class="csharp string">"multipart/form-data"</code><code class="csharp plain">&gt; </code></div><div class="line number2 index1 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">&lt;div </code><code class="csharp keyword">class</code><code class="csharp plain">=</code><code class="csharp string">"row"</code><code class="csharp plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">&lt;div </code><code class="csharp keyword">class</code><code class="csharp plain">=</code><code class="csharp string">"col-md-12"</code><code class="csharp plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">&lt;input type=</code><code class="csharp string">"file"</code> <code class="csharp plain">id=</code><code class="csharp string">"fUpload"</code> <code class="csharp plain">name=</code><code class="csharp string">"files"</code> <code class="csharp plain">multiple </code><code class="csharp keyword">class</code><code class="csharp plain">=</code><code class="csharp string">"form-control"</code> <code class="csharp plain">/&gt;</code></div><div class="line number5 index4 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">&lt;/div&gt;</code></div><div class="line number6 index5 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">&lt;/div&gt;</code></div><div class="line number7 index6 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">&lt;div </code><code class="csharp keyword">class</code><code class="csharp plain">=</code><code class="csharp string">"row"</code><code class="csharp plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">&lt;div </code><code class="csharp keyword">class</code><code class="csharp plain">=</code><code class="csharp string">"col-md-12"</code> <code class="csharp plain">style=</code><code class="csharp string">"padding-top:10px;"</code><code class="csharp plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">&lt;input type=</code><code class="csharp string">"button"</code> <code class="csharp plain">id=</code><code class="csharp string">"btnUpload"</code> <code class="csharp plain">value=</code><code class="csharp string">"Upload"</code> <code class="csharp plain">/&gt;</code></div><div class="line number10 index9 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">&lt;/div&gt;</code></div><div class="line number11 index10 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">&lt;/div&gt;</code></div><div class="line number12 index11 alt1"><code class="csharp plain">&lt;/form&gt;</code></div></div></td></tr></tbody></table></div></div>
+<h3>Server Side Code</h3>
+<p>The jQuery script sends the anti-forgery token in a header called <code>X-CSRF-TOKEN</code>, configure the anti-forgery service to look for the <code>X-CSRF-TOKEN</code> header. Making Ajax request with ASP.NET Core Razor pages is bit different. I already covered this in <a href="https://www.talkingdotnet.com/handle-ajax-requests-in-asp-net-core-razor-pages/"><u>Handle Ajax Requests in ASP.NET Core Razor Pages</u></a></p>
+<div><div id="highlighter_134926" class="syntaxhighlighter  csharp"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp keyword">public</code> <code class="csharp keyword">void</code> <code class="csharp plain">ConfigureServices(IServiceCollection services)</code></div><div class="line number2 index1 alt1"><code class="csharp plain">{</code></div><div class="line number3 index2 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">services.AddMvc();</code></div><div class="line number4 index3 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">services.AddAntiforgery(o =&gt; o.HeaderName = </code><code class="csharp string">"XSRF-TOKEN"</code><code class="csharp plain">);</code></div><div class="line number5 index4 alt2"><code class="csharp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>Below is the code of Index Model. This class exposes a POST method named <code>OnPostUpload</code> which would be called from jQuery. This method stores the uploaded files in wwwroot\Upload path. To get the <code>wwwroot</code> folder path, inject <code>IHostingEnvironment</code> services in the class constructor and assign it to a variable. </p>
+<p>The <code>Upload</code> method accepts a list of <code>IFromFile</code> object. ASP.NET Core added a new interface <code>IFromFile</code>, which represents a file sent with the HttpRequest. The rest of the code is self-explanatory.</p>
+<div><div id="highlighter_207290" class="syntaxhighlighter  csharp"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div><div class="line number39 index38 alt2">39</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp keyword">public</code> <code class="csharp keyword">class</code> <code class="csharp plain">IndexModel : PageModel</code></div><div class="line number2 index1 alt1"><code class="csharp plain">{</code></div><div class="line number3 index2 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">private</code> <code class="csharp plain">IHostingEnvironment _hostingEnvironment;</code></div><div class="line number4 index3 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp plain">IndexModel(IHostingEnvironment hostingEnvironment)</code></div><div class="line number5 index4 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number6 index5 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">_hostingEnvironment = hostingEnvironment;</code></div><div class="line number7 index6 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number8 index7 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp keyword">void</code> <code class="csharp plain">OnGet()</code></div><div class="line number9 index8 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number10 index9 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number11 index10 alt2">&nbsp;</div><div class="line number12 index11 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp plain">ActionResult OnPostUpload(List&lt;IFormFile&gt; files)</code></div><div class="line number13 index12 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number14 index13 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">if</code><code class="csharp plain">(files != </code><code class="csharp keyword">null</code> <code class="csharp plain">&amp;&amp; files.Count &gt; 0)</code></div><div class="line number15 index14 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number16 index15 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">string</code> <code class="csharp plain">folderName = </code><code class="csharp string">"Upload"</code><code class="csharp plain">;</code></div><div class="line number17 index16 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">string</code> <code class="csharp plain">webRootPath = _hostingEnvironment.WebRootPath;</code></div><div class="line number18 index17 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">string</code> <code class="csharp plain">newPath = Path.Combine(webRootPath, folderName);</code></div><div class="line number19 index18 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">if</code><code class="csharp plain">(!Directory.Exists(newPath))</code></div><div class="line number20 index19 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number21 index20 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">Directory.CreateDirectory(newPath);</code></div><div class="line number22 index21 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number23 index22 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">foreach</code> <code class="csharp plain">(IFormFile item </code><code class="csharp keyword">in</code> <code class="csharp plain">files)</code></div><div class="line number24 index23 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number25 index24 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">if</code> <code class="csharp plain">(item.Length &gt; 0)</code></div><div class="line number26 index25 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number27 index26 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">string</code> <code class="csharp plain">fileName = ContentDispositionHeaderValue.Parse(item.ContentDisposition).FileName.Trim(</code><code class="csharp string">'"'</code><code class="csharp plain">);</code></div><div class="line number28 index27 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">string</code> <code class="csharp plain">fullPath = Path.Combine(newPath, fileName);</code></div><div class="line number29 index28 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">using</code> <code class="csharp plain">(</code><code class="csharp keyword">var</code> <code class="csharp plain">stream = </code><code class="csharp keyword">new</code> <code class="csharp plain">FileStream(fullPath, FileMode.Create))</code></div><div class="line number30 index29 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number31 index30 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">item.CopyTo(stream);</code></div><div class="line number32 index31 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number33 index32 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number34 index33 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number35 index34 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">return</code> <code class="csharp keyword">this</code><code class="csharp plain">.Content(</code><code class="csharp string">"Success"</code><code class="csharp plain">);</code></div><div class="line number36 index35 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number37 index36 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">return</code> <code class="csharp keyword">this</code><code class="csharp plain">.Content(</code><code class="csharp string">"Fail"</code><code class="csharp plain">);</code></div><div class="line number38 index37 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number39 index38 alt2"><code class="csharp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<h3>jQuery Code</h3>
+<p>The jQuery script uses <code>FormData</code> object to store multiple files and passes the same object to the POST method. Regarding <code>FormData</code> object, the <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData"><u>official</u></a> documentation says,</p>
+<blockquote><p>The FormData interface provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the XMLHttpRequest.send() method. It uses the same format a form would use if the encoding type were set to “multipart/form-data”.</p></blockquote>
+<p>The script creates a new <code>FormData</code> object and loops through all the selected files for upload and appends it in <code>FormData</code> object.The jQuery ajax code does the following things,</p>
+<ul>
+<li>Passes the anti-forgery token with Ajax request header, which gets validated at server. Antiforgery token generation and validation are automatically included in Razor Pages.</li>
+<li>Passes the FormData object in data attribute. </li>
+<li>Set <code>contentType</code> to <code>false</code>. This tells jQuery to not add Content-Type header to the request.</li>
+<li>Set <code>processData</code> to <code>false</code>. This will stop jQuery to convert data value to a string.</li>
+</ul>
+<div><div id="highlighter_677530" class="syntaxhighlighter  csharp"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp plain">$(document).ready(function () {</code></div><div class="line number2 index1 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">$(</code><code class="csharp string">'#btnUpload'</code><code class="csharp plain">).</code><code class="csharp keyword">on</code><code class="csharp plain">(</code><code class="csharp string">'click'</code><code class="csharp plain">, function () {</code></div><div class="line number3 index2 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">var</code> <code class="csharp plain">files = $(</code><code class="csharp string">'#fUpload'</code><code class="csharp plain">).prop(</code><code class="csharp string">"files"</code><code class="csharp plain">);</code></div><div class="line number4 index3 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">var</code> <code class="csharp plain">fdata = </code><code class="csharp keyword">new</code> <code class="csharp plain">FormData();</code></div><div class="line number5 index4 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">for</code> <code class="csharp plain">(</code><code class="csharp keyword">var</code> <code class="csharp plain">i = 0; i &lt; files.length; i++)</code></div><div class="line number6 index5 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number7 index6 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">fdata.append(</code><code class="csharp string">"files"</code><code class="csharp plain">, files[i]);</code></div><div class="line number8 index7 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number9 index8 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">if</code> <code class="csharp plain">(files.length &gt; 0) {</code></div><div class="line number10 index9 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">$.ajax({</code></div><div class="line number11 index10 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">type: </code><code class="csharp string">"POST"</code><code class="csharp plain">,</code></div><div class="line number12 index11 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">url: </code><code class="csharp string">"/Index?handler=Upload"</code><code class="csharp plain">,</code></div><div class="line number13 index12 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">beforeSend: function (xhr) {</code></div><div class="line number14 index13 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">xhr.setRequestHeader(</code><code class="csharp string">"XSRF-TOKEN"</code><code class="csharp plain">,</code></div><div class="line number15 index14 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">$(</code><code class="csharp string">'input:hidden[name="__RequestVerificationToken"]'</code><code class="csharp plain">).val());</code></div><div class="line number16 index15 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">},</code></div><div class="line number17 index16 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">data: fdata,</code></div><div class="line number18 index17 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">contentType: </code><code class="csharp keyword">false</code><code class="csharp plain">,</code></div><div class="line number19 index18 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">processData: </code><code class="csharp keyword">false</code><code class="csharp plain">,</code></div><div class="line number20 index19 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">success: function (response) {</code></div><div class="line number21 index20 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">alert(</code><code class="csharp string">'File Uploaded Successfully.'</code><code class="csharp plain">)</code></div><div class="line number22 index21 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number23 index22 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">});</code></div><div class="line number24 index23 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number25 index24 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">else</code> <code class="csharp plain">{</code></div><div class="line number26 index25 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">alert(</code><code class="csharp string">'Please select a file.'</code><code class="csharp plain">)</code></div><div class="line number27 index26 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number28 index27 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">})</code></div><div class="line number29 index28 alt2"><code class="csharp plain">});</code></div></div></td></tr></tbody></table></div></div>
+<p>That’s it. We are all set. Now when you run this application, you should see the following.</p>
+<p><a href="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/Uploading-Multiple-Files-in-ASP.NET-Core-Razor-Pages.gif" rel="attachment wp-att-5164"><img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/Uploading-Multiple-Files-in-ASP.NET-Core-Razor-Pages.gif" alt="Uploading Multiple Files in ASP.NET Core Razor Pages" width="709" height="455" class="aligncenter size-full wp-image-5164" data-lazy-loaded="true" style="display: block;"><noscript><img src="https://www.talkingdotnet.com/wp-content/uploads/2017/11/Uploading-Multiple-Files-in-ASP.NET-Core-Razor-Pages.gif" alt="Uploading Multiple Files in ASP.NET Core Razor Pages" width="709" height="455" class="aligncenter size-full wp-image-5164" /></noscript></a></p>
+<p>You can find the source code in the <a href="https://github.com/talkingdotnet/ASPNETCoreRazorPages_MultipleFilesUpload/tree/ASPNETCoreRazorPages_MultipleFilesUpload"><u>Github</u></a>.</p>
+<p>Thank you for reading. Keep visiting this blog and share this in your network. Please put your thoughts and feedback in the comments section.</p>
+<div id="dvBottomContent">
+<strong>PS:</strong> If you found this content valuable and want to return the favour, then
+<a href="https://www.buymeacoffee.com/talkingdotnet"><img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/yellow_img.png" alt="Buy Me A Coffee" style="height: 41px !important; width: 174px !important; box-shadow: rgba(190, 190, 190, 0.5) 0px 3px 2px 0px !important; display: inline;" target="_blank" data-lazy-loaded="true"><noscript><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" target="_blank"></noscript></a>
+<div style="width:100%;padding-top:20px;">
+<div style="float:right;">
+<script async="" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/f(7).txt"></script>
+<!-- Post Bottom -->
+<ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-4919054269980932" data-ad-slot="9031798603" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0px;width:300px;height:250px;" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/saved_resource(4).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div style="float:left;">
+<script async="" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/f(7).txt"></script>
+<!-- Post Bottom Mix -->
+<ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-4919054269980932" data-ad-slot="5918491009" data-adsbygoogle-status="done"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0px;width:300px;height:250px;" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/saved_resource(5).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+</div><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Spread this:</h3><div class="sd-content"><ul><li class="share-email share-service-visible"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon no-text" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/?share=email&amp;nb=1" target="_blank" title="Click to email this to a friend"><span></span><span class="sharing-screen-reader-text">Click to email this to a friend (Opens in new window)</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon no-text" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/#print" target="_blank" title="Click to print"><span></span><span class="sharing-screen-reader-text">Click to print (Opens in new window)</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-5139" class="share-facebook sd-button share-icon no-text" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/?share=facebook&amp;nb=1" target="_blank" title="Click to share on Facebook"><span></span><span class="sharing-screen-reader-text">Click to share on Facebook (Opens in new window)</span></a></li><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-5139" class="share-twitter sd-button share-icon no-text" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/?share=twitter&amp;nb=1" target="_blank" title="Click to share on Twitter"><span></span><span class="sharing-screen-reader-text">Click to share on Twitter (Opens in new window)</span></a></li><li class="share-telegram"><a rel="nofollow" data-shared="" class="share-telegram sd-button share-icon no-text" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/?share=telegram&amp;nb=1" target="_blank" title="Click to share on Telegram"><span></span><span class="sharing-screen-reader-text">Click to share on Telegram (Opens in new window)</span></a></li><li class="share-pinterest"><a rel="nofollow" data-shared="sharing-pinterest-5139" class="share-pinterest sd-button share-icon no-text" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/?share=pinterest&amp;nb=1" target="_blank" title="Click to share on Pinterest"><span></span><span class="sharing-screen-reader-text">Click to share on Pinterest (Opens in new window)</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-5139" class="share-linkedin sd-button share-icon no-text" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/?share=linkedin&amp;nb=1" target="_blank" title="Click to share on LinkedIn"><span></span><span class="sharing-screen-reader-text">Click to share on LinkedIn (Opens in new window)</span></a></li><li class="share-skype"><a rel="nofollow" data-shared="sharing-skype-5139" class="share-skype sd-button share-icon no-text" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/?share=skype&amp;nb=1" target="_blank" title="Share on Skype"><span></span><span class="sharing-screen-reader-text">Share on Skype (Opens in new window)</span></a></li><li class="share-jetpack-whatsapp"><a rel="nofollow" data-shared="" class="share-jetpack-whatsapp sd-button share-icon no-text" href="whatsapp://send?text=Uploading%20Multiple%20Files%20in%20ASP.NET%20Core%20Razor%20Pages https%3A%2F%2Fwww.talkingdotnet.com%2Fuploading-multiple-files-asp-net-core-razor-pages%2F" target="_blank" title="Click to share on WhatsApp"><span></span><span class="sharing-screen-reader-text">Click to share on WhatsApp (Opens in new window)</span></a></li><li class="share-reddit"><a rel="nofollow" data-shared="" class="share-reddit sd-button share-icon no-text" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/?share=reddit&amp;nb=1" target="_blank" title="Click to share on Reddit"><span></span><span class="sharing-screen-reader-text">Click to share on Reddit (Opens in new window)</span></a></li><li class="share-pocket"><a rel="nofollow" data-shared="" class="share-pocket sd-button share-icon no-text" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/?share=pocket&amp;nb=1" target="_blank" title="Click to share on Pocket"><span></span><span class="sharing-screen-reader-text">Click to share on Pocket (Opens in new window)</span></a></li><li class="share-tumblr"><a rel="nofollow" data-shared="" class="share-tumblr sd-button share-icon no-text" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/?share=tumblr&amp;nb=1" target="_blank" title="Click to share on Tumblr"><span></span><span class="sharing-screen-reader-text">Click to share on Tumblr (Opens in new window)</span></a></li><li><a href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/#" class="sharing-anchor sd-button share-more"><span>More</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none; width: 150px;"><ul style="background-image:none;"><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-5139" class="share-google-plus-1 sd-button share-icon no-text" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/?share=google-plus-1&amp;nb=1" target="_blank" title="Click to share on Google+"><span></span><span class="sharing-screen-reader-text">Click to share on Google+ (Opens in new window)</span></a></li><li class="share-end"></li></ul></div></div></div></div></div>
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-minimal"><p class="jp-relatedposts-post jp-relatedposts-post0" data-post-id="6410" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://www.talkingdotnet.com/asp-net-core-2-1-razor-ui-as-class-library/" title="ASP.NET Core 2.1: Razor UI as Class Library
+
+One of the new features of ASP.NET Core 2.1 is, Razor UI as a class library. It makes easier to build and include Razor based UI in a library and share it across multiple projects. A new Razor SDK will enable building Razor files into a class library project that…" rel="nofollow" data-origin="5139" data-position="0">ASP.NET Core 2.1: Razor UI as Class Library</a></span><span class="jp-relatedposts-post-date">May 10, 2018</span><span class="jp-relatedposts-post-context">In "ASP.NET Core"</span></p><p class="jp-relatedposts-post jp-relatedposts-post1" data-post-id="5086" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://www.talkingdotnet.com/handle-ajax-requests-in-asp-net-core-razor-pages/" title="Handle Ajax Requests in ASP.NET Core Razor Pages
+
+Razor Pages are a new feature of ASP.NET Core that makes coding page-focused scenarios easier and more productive. Razor pages use handler methods to deal with the incoming HTTP request (GET/POST/PUT/Delete). These are similar to Action methods of ASP.NET MVC or WEB API. Razor Pages follow particular naming convention and…" rel="nofollow" data-origin="5139" data-position="1">Handle Ajax Requests in ASP.NET Core Razor Pages</a></span><span class="jp-relatedposts-post-date">October 30, 2017</span><span class="jp-relatedposts-post-context">In "ASP.NET Core"</span></p><p class="jp-relatedposts-post jp-relatedposts-post2" data-post-id="5225" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://www.talkingdotnet.com/import-export-excel-asp-net-core-2-razor-pages/" title="Import and Export excel in ASP.NET Core 2.0 Razor Pages
+
+Last year around this time I wrote about Import and Export xlsx in ASP.NET Core, using an unofficial version of EPPlus.Core as EPPlus didn&#39;t have .NET core support. In fact, many such popular libraries lacked support for .NET Core as the framework was not mature enough then. When .NET Standards…" rel="nofollow" data-origin="5139" data-position="2">Import and Export excel in ASP.NET Core 2.0 Razor Pages</a></span><span class="jp-relatedposts-post-date">November 20, 2017</span><span class="jp-relatedposts-post-context">In "ASP.NET Core"</span></p></div></div>					</div><!-- .entry-content -->
+
+		<footer class="entry-meta">
+
+	    		      <!-- tags -->
+	      <div class="tagcloud" style="display: block;">
+
+	          <a href="https://www.talkingdotnet.com/tag/asp-net-core-2-0/">ASP.NET Core 2.0</a> <a href="https://www.talkingdotnet.com/tag/razor-pages/">Razor Pages</a> 
+	      </div>
+	      <!-- end tags -->
+	      
+		</footer><!-- .entry-meta -->
+	</div>
+
+	
+</article><!-- #post-## -->
+
+			
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			8 thoughts on “<span>Uploading Multiple Files in ASP.NET Core Razor Pages</span>”		</h2>
+
+		
+		<ol class="comment-list">
+					<li id="comment-113136" class="comment even thread-even depth-1">
+			<article id="div-comment-113136" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/1x1.trans.gif" data-lazy-src="https://secure.gravatar.com/avatar/3c4d50836022d8ad889291c89fad0401?s=60&amp;r=g" alt="" srcset="https://secure.gravatar.com/avatar/3c4d50836022d8ad889291c89fad0401?s=120&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60"><noscript><img alt='' src='https://secure.gravatar.com/avatar/3c4d50836022d8ad889291c89fad0401?s=60&#038;r=g' srcset='https://secure.gravatar.com/avatar/3c4d50836022d8ad889291c89fad0401?s=120&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' /></noscript>						<b class="fn"><a href="http://under%20construction/" rel="external nofollow" class="url">Jagdish Kumar</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/#comment-113136">
+							<time datetime="2018-12-11T14:21:49+00:00">
+								December 11, 2018 at 2:21 PM							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>It’s nice but i want little bit more to store multiple files in fb and show on web page under uploaded user account. Can u help how to do this.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link btn btn-sm btn-default" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/?replytocom=113136#respond" onclick="return addComment.moveForm( &quot;div-comment-113136&quot;, &quot;113136&quot;, &quot;respond&quot;, &quot;5139&quot; )" aria-label="Reply to Jagdish Kumar" style="display: inline;">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-66082" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-66082" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/1x1.trans.gif" data-lazy-src="https://secure.gravatar.com/avatar/1edb87b5560843dc77a05307b1c560df?s=60&amp;r=g" alt="" srcset="https://secure.gravatar.com/avatar/1edb87b5560843dc77a05307b1c560df?s=120&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60"><noscript><img alt='' src='https://secure.gravatar.com/avatar/1edb87b5560843dc77a05307b1c560df?s=60&#038;r=g' srcset='https://secure.gravatar.com/avatar/1edb87b5560843dc77a05307b1c560df?s=120&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' /></noscript>						<b class="fn">Costa</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/#comment-66082">
+							<time datetime="2018-09-14T07:18:24+00:00">
+								September 14, 2018 at 7:18 AM							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>string fileName = ContentDispositionHeaderValue.Parse(item.ContentDisposition).FileName.Trim(‘”‘);</p>
+<p>should be replaced by:</p>
+<p>string fileName = Path.GetFileName(item.FileName);</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link btn btn-sm btn-default" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/?replytocom=66082#respond" onclick="return addComment.moveForm( &quot;div-comment-66082&quot;, &quot;66082&quot;, &quot;respond&quot;, &quot;5139&quot; )" aria-label="Reply to Costa" style="display: inline;">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-49737" class="comment even thread-even depth-1">
+			<article id="div-comment-49737" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/1x1.trans.gif" data-lazy-src="https://secure.gravatar.com/avatar/8a83cddedc0c44342cae8f706ba95068?s=60&amp;r=g" alt="" srcset="https://secure.gravatar.com/avatar/8a83cddedc0c44342cae8f706ba95068?s=120&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60"><noscript><img alt='' src='https://secure.gravatar.com/avatar/8a83cddedc0c44342cae8f706ba95068?s=60&#038;r=g' srcset='https://secure.gravatar.com/avatar/8a83cddedc0c44342cae8f706ba95068?s=120&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' /></noscript>						<b class="fn">Fasna</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/#comment-49737">
+							<time datetime="2018-08-11T11:28:28+00:00">
+								August 11, 2018 at 11:28 AM							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>it’s really work for me</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link btn btn-sm btn-default" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/?replytocom=49737#respond" onclick="return addComment.moveForm( &quot;div-comment-49737&quot;, &quot;49737&quot;, &quot;respond&quot;, &quot;5139&quot; )" aria-label="Reply to Fasna" style="display: inline;">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-17168" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-17168" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/1x1.trans.gif" data-lazy-src="https://secure.gravatar.com/avatar/3a3bc32eefc839ccd8a0b3d80301756d?s=60&amp;r=g" alt="" srcset="https://secure.gravatar.com/avatar/3a3bc32eefc839ccd8a0b3d80301756d?s=120&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60"><noscript><img alt='' src='https://secure.gravatar.com/avatar/3a3bc32eefc839ccd8a0b3d80301756d?s=60&#038;r=g' srcset='https://secure.gravatar.com/avatar/3a3bc32eefc839ccd8a0b3d80301756d?s=120&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' /></noscript>						<b class="fn">Muhammad Abdullah</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/#comment-17168">
+							<time datetime="2018-05-12T19:24:17+00:00">
+								May 12, 2018 at 7:24 PM							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Thanks for great tutorial</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link btn btn-sm btn-default" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/?replytocom=17168#respond" onclick="return addComment.moveForm( &quot;div-comment-17168&quot;, &quot;17168&quot;, &quot;respond&quot;, &quot;5139&quot; )" aria-label="Reply to Muhammad Abdullah" style="display: inline;">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-2947" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://denizzzd.byethost4.com/pro/2017/11/03/interesting-articles-in-oct-dec-2017/" rel="external nofollow" class="url">Interesting Articles in Oct-Dec 2017 – ProgBlog</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-1846" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="https://www.sswug.org/sswugresearch/community/uploading-multiple-files-in-asp-net-core-razor-pages/" rel="external nofollow" class="url">Uploading Multiple Files in ASP.NET Core Razor Pages - SSWUG.ORG</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-1629" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://www.myit101.com/uploading-multiple-files-in-asp-net-core-razor-pages/" rel="external nofollow" class="url">Uploading Multiple Files in ASP.NET Core Razor Pages – MyIT101</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-1618" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://blog.sitedesign.gr/uploading-multiple-files-in-asp-net-core-razor-pages/" rel="external nofollow" class="url">Uploading Multiple Files in ASP.NET Core Razor Pages – Site Design</a> 			</div>
+</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+	
+					<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/#respond" style="display:none;">Cancel reply</a></small></h3>				<form action="https://www.talkingdotnet.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+					<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea autocomplete="nope" id="comment" name="da993178f3" cols="45" rows="8" aria-required="true" required="required"></textarea><textarea id="e87d8c7280db6bad7a02115c65aabd3a" aria-hidden="true" name="comment" autocomplete="nope" style="padding:0;clip:rect(1px, 1px, 1px, 1px);position:absolute !important;white-space:nowrap;height:1px;width:1px;overflow:hidden;" tabindex="-1"></textarea><script type="text/javascript">document.getElementById("comment").setAttribute( "id", "e87d8c7280db6bad7a02115c65aabd3a" );document.getElementById("8969822289").setAttribute( "id", "comment" );</script></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required="true" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" aria-describedby="email-notes" aria-required="true" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit btn btn-default" value="Post Comment" style="display: inline-block;"> <input type="hidden" name="comment_post_ID" value="5139" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p>				</form>
+					</div><!-- #respond -->
+		
+</div><!-- #comments -->
+				<nav class="navigation post-navigation" role="navigation">
+		<h3 class="screen-reader-text">Post navigation</h3>
+		<div class="nav-links">
+			<div class="nav-previous"><a href="https://www.talkingdotnet.com/get-client-ip-address-asp-net-core-2-0-razor-pages/" rel="prev"><i class="fa fa-chevron-left"></i> How to Get Client IP Address in ASP.NET Core 2.0 Razor Pages</a></div><div class="nav-next"><a href="https://www.talkingdotnet.com/how-to-create-an-angular-4-app-with-visual-studio-2017/" rel="next">How to create an Angular 4 app with Visual Studio 2017 <i class="fa fa-chevron-right"></i></a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+</div>
+	<div id="secondary" class="widget-area col-sm-12 col-md-4" role="complementary">
+		<div class="well">
+						<aside id="text-6" class="widget-odd widget-first widget-1 widget widget_text">			<div class="textwidget"><script async="" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/f(7).txt"></script><!-- SideBar 300 --><ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-4919054269980932" data-ad-slot="8543708208" data-adsbygoogle-status="done"><ins id="aswift_4_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_4_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;border:0px;width:300px;height:250px;" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/saved_resource(6).html"></iframe></ins></ins></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<br><br>
+<div style="text-align:center;"><a href="https://www.buymeacoffee.com/talkingdotnet"><img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/yellow_img.png" alt="Buy Me A Coffee">
+</a></div></div>
+		</aside><aside id="search-2" class="widget-even widget-2 searchborder widget widget_search">
+<form role="search" method="get" class="form-search" action="https://www.talkingdotnet.com/">
+  <div class="input-group">
+  	<label class="screen-reader-text" for="s">Search for:</label>
+    <input type="text" class="form-control search-query" placeholder="Search…" value="" name="s" title="Search for:">
+    <span class="input-group-btn">
+      <button type="submit" class="btn btn-default" name="submit" id="searchsubmit" value="Search" style=""><span class="glyphicon glyphicon-search"></span></button>
+    </span>
+  </div>
+</form></aside><aside id="blog_subscription-2" class="widget-odd widget-3 .subscribe widget jetpack_subscription_widget"><h3 class="widget-title">GET UPDATES IN YOUR INBOX</h3>
+			<form action="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-2">
+				<div id="subscribe-text"></div>					<p id="subscribe-email">
+						<label id="jetpack-subscribe-label" for="subscribe-field-blog_subscription-2" style="clip: rect(1px, 1px, 1px, 1px); position: absolute; height: 1px; width: 1px; overflow: hidden;">
+							Email Address						</label>
+						<input type="email" name="email" required="required" class="required" value="" id="subscribe-field-blog_subscription-2" placeholder="Email Address">
+					</p>
+
+					<p id="subscribe-submit">
+						<input type="hidden" name="action" value="subscribe">
+						<input type="hidden" name="source" value="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/">
+						<input type="hidden" name="sub-type" value="widget">
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-2">
+												<input type="submit" value="Subscribe" name="jetpack_subscriptions_widget" class="btn btn-default">
+					</p>
+							</form>
+
+			<script>
+			/*
+			Custom functionality for safari and IE
+			 */
+			(function( d ) {
+				// In case the placeholder functionality is available we remove labels
+				if ( ( 'placeholder' in d.createElement( 'input' ) ) ) {
+					var label = d.querySelector( 'label[for=subscribe-field-blog_subscription-2]' );
+						label.style.clip 	 = 'rect(1px, 1px, 1px, 1px)';
+						label.style.position = 'absolute';
+						label.style.height   = '1px';
+						label.style.width    = '1px';
+						label.style.overflow = 'hidden';
+				}
+
+				// Make sure the email value is filled in before allowing submit
+				var form = d.getElementById('subscribe-blog-blog_subscription-2'),
+					input = d.getElementById('subscribe-field-blog_subscription-2'),
+					handler = function( event ) {
+						if ( '' === input.value ) {
+							input.focus();
+
+							if ( event.preventDefault ){
+								event.preventDefault();
+							}
+
+							return false;
+						}
+					};
+
+				if ( window.addEventListener ) {
+					form.addEventListener( 'submit', handler, false );
+				} else {
+					form.attachEvent( 'onsubmit', handler );
+				}
+			})( document );
+			</script>
+				
+</aside><aside id="text-5" class="widget-even widget-4 follow_us widget widget_text"><h3 class="widget-title">Follow US</h3>			<div class="textwidget"><div class="social-icons sticky-sidebar-social"> <nav id="menu-social" class="social-icons">
+<ul id="menu-social-items" class="social-menu"><li id="menu-item-2035" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2035">
+<a href="https://www.talkingdotnet.com/feed/"><i class="social_icon fa"><span>Feed</span></i></a></li>
+<li id="menu-item-2036" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2036">
+<a href="https://twitter.com/talkingdotnet" onclick="__gaTracker(\&#39;send\&#39;, \&#39;event\&#39;, \&#39;outbound-widget\&#39;, \&#39;https://twitter.com/talkingdotnet\&#39;, \&#39;Twitter\&#39;);">
+<i class="social_icon fa"><span>Twitter</span></i></a></li><li id="menu-item-2037" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2037">
+<a href="https://www.facebook.com/talkingdotnet" onclick="__gaTracker(\&#39;send\&#39;, \&#39;event\&#39;, \&#39;outbound-widget\&#39;, \&#39;https://www.facebook.com/talkingdotnet\&#39;, \&#39;Follow us on Facebook\&#39;);">
+<i class="social_icon fa"><span>Follow us on Facebook</span></i></a></li>
+<li id="menu-item-2039" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2040">
+<a href="https://www.pinterest.com/talkingdotnet/" onclick="__gaTracker(\&#39;send\&#39;, \&#39;event\&#39;, \&#39;outbound-widget\&#39;, \&#39;https://www.pinterest.com/talkingdotnet/\&#39;, \&#39;Follow us on Pinterest\&#39;);">
+<i class="social_icon fa"><span>Follow us on Pinterest</span></i></a></li></ul></nav></div></div>
+		</aside><aside id="text-7" class="widget-odd widget-5 widget widget_text">			<div class="textwidget"><script async="" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/f(7).txt"></script><!-- SideBar 300 --><ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-4919054269980932" data-ad-slot="8543708208" data-adsbygoogle-status="done"><ins id="aswift_5_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_5_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_5" name="aswift_5" style="left:0;position:absolute;top:0;border:0px;width:300px;height:250px;" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/saved_resource(7).html"></iframe></ins></ins></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+		</aside>		<aside id="recent-posts-2" class="widget-even widget-6 sidebarh3 widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="https://www.talkingdotnet.com/asp-net-core-3-0-app-with-net-core-3-preview-2-and-visual-studio-2019/">ASP.NET Core 3.0 App with .NET Core 3.0 preview 2 release</a>
+						</li>
+					<li>
+				<a href="https://www.talkingdotnet.com/visual-studio-2019-preview-2-release-update/">Visual Studio 2019 Preview 2 release new features</a>
+						</li>
+					<li>
+				<a href="https://www.talkingdotnet.com/create-net-core-application-using-entity-framework-core-with-oracle/">How You Can Create a .NET Core Application Using Entity Framework Core with Oracle</a>
+						</li>
+					<li>
+				<a href="https://www.talkingdotnet.com/7-simple-hacks-supercharge-web-applications-angular-7/">7 Simple Hacks to Supercharge Your Angular 7 App</a>
+						</li>
+					<li>
+				<a href="https://www.talkingdotnet.com/creating-first-asp-net-core-3-0-app-visual-studio-2019/">Creating First ASP.NET Core 3.0 App with Visual Studio 2019 Preview</a>
+						</li>
+					<li>
+				<a href="https://www.talkingdotnet.com/how-to-set-canonical-url-in-angular-7/">How to set Canonical URL in Angular 7</a>
+						</li>
+					<li>
+				<a href="https://www.talkingdotnet.com/show-image-preview-before-uploading-using-angular-7/">Show an image preview before uploading using Angular 7</a>
+						</li>
+				</ul>
+		</aside>		<aside id="text-9" class="widget-odd widget-7 widget widget_text">			<div class="textwidget"><div style="text-align:center;"><a href="https://gumroad.com/a/391689331" title="React Bible"><img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/Learn-React-Right-Way.png" width="65%" height="auto"></a></div>
+
+<div style="text-align:center;">
+​<a href="https://gumroad.com/a/324842611" title="Angular Bible"><img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/ng-book-cover-ngb-ng-550.png" width="65%" height="auto"></a>
+</div></div>
+		</aside><aside id="sparkling_popular_posts-2" class="widget-even widget-8 sidebarh3 widget sparkling-popular-posts"><h3 class="widget-title">Popular Posts</h3>
+    <!-- popular posts -->
+          <div class="popular-posts-wrapper">
+
+                
+                        
+                        <!-- post -->
+                        <div class="post">
+
+                          <!-- image -->
+                          <div class="post-image ">
+
+                                <a href="https://www.talkingdotnet.com/how-to-create-an-angular-6-app-with-visual-studio-2017/"></a>
+
+                          </div> <!-- end post image -->
+
+                          <!-- content -->
+                          <div class="post-content">
+
+                              <a href="https://www.talkingdotnet.com/how-to-create-an-angular-6-app-with-visual-studio-2017/">How to create an Angular 6 app with Visual Studio 2017</a>
+                              <span class="date">24 May , 2018</span>
+
+
+                          </div><!-- end content -->
+                        </div><!-- end post -->
+
+                        
+                    
+                        
+                        <!-- post -->
+                        <div class="post">
+
+                          <!-- image -->
+                          <div class="post-image ">
+
+                                <a href="https://www.talkingdotnet.com/upgrade-angular-5-app-angular-6-visual-studio-2017/"></a>
+
+                          </div> <!-- end post image -->
+
+                          <!-- content -->
+                          <div class="post-content">
+
+                              <a href="https://www.talkingdotnet.com/upgrade-angular-5-app-angular-6-visual-studio-2017/">Upgrade Angular 5 app to Angular 6 with Visual Studio 2017</a>
+                              <span class="date">08 May , 2018</span>
+
+
+                          </div><!-- end content -->
+                        </div><!-- end post -->
+
+                        
+                    
+                        
+                        <!-- post -->
+                        <div class="post">
+
+                          <!-- image -->
+                          <div class="post-image ">
+
+                                <a href="https://www.talkingdotnet.com/implement-asp-net-core-spa-template-feature-in-angular6-app/"></a>
+
+                          </div> <!-- end post image -->
+
+                          <!-- content -->
+                          <div class="post-content">
+
+                              <a href="https://www.talkingdotnet.com/implement-asp-net-core-spa-template-feature-in-angular6-app/">Implement ASP.NET Core SPA template features in an Angular 6 app</a>
+                              <span class="date">29 May , 2018</span>
+
+
+                          </div><!-- end content -->
+                        </div><!-- end post -->
+
+                        
+                    
+                        
+                        <!-- post -->
+                        <div class="post">
+
+                          <!-- image -->
+                          <div class="post-image ">
+
+                                <a href="https://www.talkingdotnet.com/upgrade-angular-4-app-angular-5-visual-studio-2017/"><img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/Upgrade-Angular-4-app-to-Angular-5-with-Visual-Studio-2017-60x60.jpg" width="60" height="60" class="attachment-tab-small size-tab-small wp-post-image" alt="Upgrade Angular 4 app to Angular 5 with Visual Studio 2017" srcset="https://www.talkingdotnet.com/wp-content/uploads/2017/12/Upgrade-Angular-4-app-to-Angular-5-with-Visual-Studio-2017-150x150.jpg 150w, https://www.talkingdotnet.com/wp-content/uploads/2017/12/Upgrade-Angular-4-app-to-Angular-5-with-Visual-Studio-2017-60x60.jpg 60w" sizes="(max-width: 60px) 100vw, 60px" data-lazy-loaded="true" style="display: inline;"><noscript><img width="60" height="60" src="https://www.talkingdotnet.com/wp-content/uploads/2017/12/Upgrade-Angular-4-app-to-Angular-5-with-Visual-Studio-2017-60x60.jpg" class="attachment-tab-small size-tab-small wp-post-image" alt="Upgrade Angular 4 app to Angular 5 with Visual Studio 2017" srcset="https://www.talkingdotnet.com/wp-content/uploads/2017/12/Upgrade-Angular-4-app-to-Angular-5-with-Visual-Studio-2017-150x150.jpg 150w, https://www.talkingdotnet.com/wp-content/uploads/2017/12/Upgrade-Angular-4-app-to-Angular-5-with-Visual-Studio-2017-60x60.jpg 60w" sizes="(max-width: 60px) 100vw, 60px" /></noscript></a>
+
+                          </div> <!-- end post image -->
+
+                          <!-- content -->
+                          <div class="post-content">
+
+                              <a href="https://www.talkingdotnet.com/upgrade-angular-4-app-angular-5-visual-studio-2017/">Upgrade Angular 4 app to Angular 5 with Visual Studio 2017</a>
+                              <span class="date">20 Dec , 2017</span>
+
+
+                          </div><!-- end content -->
+                        </div><!-- end post -->
+
+                        
+                    
+                        
+                        <!-- post -->
+                        <div class="post">
+
+                          <!-- image -->
+                          <div class="post-image ">
+
+                                <a href="https://www.talkingdotnet.com/difference-between-angular-1-x-and-angular-2/"><img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/Difference-between-Angular-1x-and-Angular-2-60x60.png" width="60" height="60" class="attachment-tab-small size-tab-small wp-post-image" alt="Difference between Angular 1x and Angular 2" srcset="https://www.talkingdotnet.com/wp-content/uploads/2016/03/Difference-between-Angular-1x-and-Angular-2-150x150.png 150w, https://www.talkingdotnet.com/wp-content/uploads/2016/03/Difference-between-Angular-1x-and-Angular-2-60x60.png 60w" sizes="(max-width: 60px) 100vw, 60px" data-lazy-loaded="true" style="display: inline;"><noscript><img width="60" height="60" src="https://www.talkingdotnet.com/wp-content/uploads/2016/03/Difference-between-Angular-1x-and-Angular-2-60x60.png" class="attachment-tab-small size-tab-small wp-post-image" alt="Difference between Angular 1x and Angular 2" srcset="https://www.talkingdotnet.com/wp-content/uploads/2016/03/Difference-between-Angular-1x-and-Angular-2-150x150.png 150w, https://www.talkingdotnet.com/wp-content/uploads/2016/03/Difference-between-Angular-1x-and-Angular-2-60x60.png 60w" sizes="(max-width: 60px) 100vw, 60px" /></noscript></a>
+
+                          </div> <!-- end post image -->
+
+                          <!-- content -->
+                          <div class="post-content">
+
+                              <a href="https://www.talkingdotnet.com/difference-between-angular-1-x-and-angular-2/">Difference between Angular 1.x and Angular 2</a>
+                              <span class="date">14 Mar , 2016</span>
+
+
+                          </div><!-- end content -->
+                        </div><!-- end post -->
+
+                        
+                    
+                        
+                        <!-- post -->
+                        <div class="post">
+
+                          <!-- image -->
+                          <div class="post-image ">
+
+                                <a href="https://www.talkingdotnet.com/import-export-excel-asp-net-core-2-razor-pages/"></a>
+
+                          </div> <!-- end post image -->
+
+                          <!-- content -->
+                          <div class="post-content">
+
+                              <a href="https://www.talkingdotnet.com/import-export-excel-asp-net-core-2-razor-pages/">Import and Export excel in ASP.NET Core 2.0 Razor Pages</a>
+                              <span class="date">20 Nov , 2017</span>
+
+
+                          </div><!-- end content -->
+                        </div><!-- end post -->
+
+                        
+                    
+                        
+                        <!-- post -->
+                        <div class="post">
+
+                          <!-- image -->
+                          <div class="post-image ">
+
+                                <a href="https://www.talkingdotnet.com/global-exception-handling-in-aspnet-core-webapi/"><img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/Global-Exception-Handling-in-ASPNET-Core-WEB-API-60x60.jpg" width="60" height="60" class="attachment-tab-small size-tab-small wp-post-image" alt="Global Exception Handling in ASPNET Core WEB API" srcset="https://www.talkingdotnet.com/wp-content/uploads/2016/08/Global-Exception-Handling-in-ASPNET-Core-WEB-API-150x150.jpg 150w, https://www.talkingdotnet.com/wp-content/uploads/2016/08/Global-Exception-Handling-in-ASPNET-Core-WEB-API-60x60.jpg 60w" sizes="(max-width: 60px) 100vw, 60px" data-lazy-loaded="true" style="display: inline;"><noscript><img width="60" height="60" src="https://www.talkingdotnet.com/wp-content/uploads/2016/08/Global-Exception-Handling-in-ASPNET-Core-WEB-API-60x60.jpg" class="attachment-tab-small size-tab-small wp-post-image" alt="Global Exception Handling in ASPNET Core WEB API" srcset="https://www.talkingdotnet.com/wp-content/uploads/2016/08/Global-Exception-Handling-in-ASPNET-Core-WEB-API-150x150.jpg 150w, https://www.talkingdotnet.com/wp-content/uploads/2016/08/Global-Exception-Handling-in-ASPNET-Core-WEB-API-60x60.jpg 60w" sizes="(max-width: 60px) 100vw, 60px" /></noscript></a>
+
+                          </div> <!-- end post image -->
+
+                          <!-- content -->
+                          <div class="post-content">
+
+                              <a href="https://www.talkingdotnet.com/global-exception-handling-in-aspnet-core-webapi/">Global Exception Handling in ASP.NET Core WEB API</a>
+                              <span class="date">17 Aug , 2016</span>
+
+
+                          </div><!-- end content -->
+                        </div><!-- end post -->
+
+                        
+                    
+                        
+                        <!-- post -->
+                        <div class="post">
+
+                          <!-- image -->
+                          <div class="post-image ">
+
+                                <a href="https://www.talkingdotnet.com/handle-ajax-requests-in-asp-net-core-razor-pages/"></a>
+
+                          </div> <!-- end post image -->
+
+                          <!-- content -->
+                          <div class="post-content">
+
+                              <a href="https://www.talkingdotnet.com/handle-ajax-requests-in-asp-net-core-razor-pages/">Handle Ajax Requests in ASP.NET Core Razor Pages</a>
+                              <span class="date">30 Oct , 2017</span>
+
+
+                          </div><!-- end content -->
+                        </div><!-- end post -->
+
+                        
+                    
+          </div> <!-- end posts wrapper -->
+
+		</aside><aside id="wpctc_widget-2" class="widget-odd widget-last widget-9 sidebarh3 widget widget_wpctc_widget"><h3 class="widget-title">Categories</h3>    <div id="wpctc_widget-2-tagcloud" class="wpctc-wpctc_widget-2 wpctc-tag-links      wpctc-price">
+        <ul class="wp-tag-cloud">
+	<li><a href="https://www.talkingdotnet.com/net-5-4/" class="tag-link-51" title="1 topic" style="font-size: 100%;">.NET 5.4</a></li>
+	<li><a href="https://www.talkingdotnet.com/net-core/" class="tag-link-78" title="11 topics" style="font-size: 100%;">.NET Core</a></li>
+	<li><a href="https://www.talkingdotnet.com/angular/" class="tag-link-58" title="28 topics" style="font-size: 100%;">Angular</a></li>
+	<li><a href="https://www.talkingdotnet.com/angular-2/" class="tag-link-61" title="8 topics" style="font-size: 100%;">Angular 2</a></li>
+	<li><a href="https://www.talkingdotnet.com/asp-net/" class="tag-link-5" title="10 topics" style="font-size: 100%;">ASP.NET</a></li>
+	<li><a href="https://www.talkingdotnet.com/asp-net/asp-net-5/" class="tag-link-3" title="10 topics" style="font-size: 100%;">ASP.NET 5</a></li>
+	<li><a href="https://www.talkingdotnet.com/asp-net-core-1-0/" class="tag-link-40" title="109 topics" style="font-size: 100%;">ASP.NET Core</a></li>
+	<li><a href="https://www.talkingdotnet.com/asp-net-mvc/" class="tag-link-35" title="5 topics" style="font-size: 100%;">ASP.NET MVC</a></li>
+	<li><a href="https://www.talkingdotnet.com/blazor/" class="tag-link-120" title="1 topic" style="font-size: 100%;">Blazor</a></li>
+	<li><a href="https://www.talkingdotnet.com/entity-framework/" class="tag-link-71" title="9 topics" style="font-size: 100%;">Entity Framework</a></li>
+	<li><a href="https://www.talkingdotnet.com/grunt/" class="tag-link-20" title="2 topics" style="font-size: 100%;">Grunt</a></li>
+	<li><a href="https://www.talkingdotnet.com/gulp/" class="tag-link-23" title="3 topics" style="font-size: 100%;">Gulp</a></li>
+	<li><a href="https://www.talkingdotnet.com/interview-questions/" class="tag-link-30" title="4 topics" style="font-size: 100%;">Interview Questions</a></li>
+	<li><a href="https://www.talkingdotnet.com/mvc-6/" class="tag-link-36" title="1 topic" style="font-size: 100%;">MVC 6</a></li>
+	<li><a href="https://www.talkingdotnet.com/nancyfx/" class="tag-link-85" title="1 topic" style="font-size: 100%;">NancyFx</a></li>
+	<li><a href="https://www.talkingdotnet.com/react/" class="tag-link-110" title="3 topics" style="font-size: 100%;">React</a></li>
+	<li><a href="https://www.talkingdotnet.com/sql-server/" class="tag-link-101" title="1 topic" style="font-size: 100%;">SQL Server</a></li>
+	<li><a href="https://www.talkingdotnet.com/testing/" class="tag-link-97" title="1 topic" style="font-size: 100%;">Testing</a></li>
+	<li><a href="https://www.talkingdotnet.com/typescript/" class="tag-link-32" title="2 topics" style="font-size: 100%;">TypeScript</a></li>
+	<li><a href="https://www.talkingdotnet.com/visual-studio/" class="tag-link-11" title="8 topics" style="font-size: 100%;">Visual Studio</a></li>
+	<li><a href="https://www.talkingdotnet.com/web-api/" class="tag-link-66" title="14 topics" style="font-size: 100%;">Web API</a></li>
+	<li><a href="https://www.talkingdotnet.com/yeoman/" class="tag-link-27" title="1 topic" style="font-size: 100%;">Yeoman</a></li>
+</ul>
+        </div>
+                    <style type="text/css">
+                .wpctc-wpctc_widget-2                a {
+                    color: #ffffff !important;
+                }
+
+                .wpctc-tag-links.wpctc-wpctc_widget-2                a:after {
+                    background-color: #ffffff !important;
+                }
+            </style>
+                    <style type="text/css">
+                .wpctc-wpctc_widget-2                a {
+                    background-color: #DA4453 !important;
+                }
+
+                .wpctc-tag-links.wpctc-wpctc_widget-2                a:before {
+                    border-right-color: #DA4453 !important;
+                }
+            </style>
+        </aside>		</div>
+	</div><!-- #secondary -->
+		</div><!-- close .row -->
+	</div><!-- close .container -->
+</div><!-- close .site-content -->
+
+	<div id="footer-area">
+		<div class="container footer-inner">
+			<div class="row">
+				
+	
+	<div class="footer-widget-area">
+				<div class="col-sm-4 footer-widget" role="complementary">
+					<div id="recent-posts-3" class="widget-odd widget-last widget-first widget-1 widget widget_recent_entries">		<h3 class="widgettitle">Recent Posts</h3>		<ul>
+					<li>
+				<a href="https://www.talkingdotnet.com/asp-net-core-3-0-app-with-net-core-3-preview-2-and-visual-studio-2019/">ASP.NET Core 3.0 App with .NET Core 3.0 preview 2 release</a>
+						</li>
+					<li>
+				<a href="https://www.talkingdotnet.com/visual-studio-2019-preview-2-release-update/">Visual Studio 2019 Preview 2 release new features</a>
+						</li>
+					<li>
+				<a href="https://www.talkingdotnet.com/create-net-core-application-using-entity-framework-core-with-oracle/">How You Can Create a .NET Core Application Using Entity Framework Core with Oracle</a>
+						</li>
+					<li>
+				<a href="https://www.talkingdotnet.com/7-simple-hacks-supercharge-web-applications-angular-7/">7 Simple Hacks to Supercharge Your Angular 7 App</a>
+						</li>
+					<li>
+				<a href="https://www.talkingdotnet.com/creating-first-asp-net-core-3-0-app-visual-studio-2019/">Creating First ASP.NET Core 3.0 App with Visual Studio 2019 Preview</a>
+						</li>
+				</ul>
+		</div>				</div><!-- .widget-area .first -->
+		
+				<div class="col-sm-4 footer-widget" role="complementary">
+			<div id="blog_subscription-3" class="widget-odd widget-last widget-first widget-1 widget jetpack_subscription_widget"><h3 class="widgettitle">JOIN THE NEWSLETTER</h3>
+			<form action="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-3">
+				<div id="subscribe-text"><p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
+</div>					<p id="subscribe-email">
+						<label id="jetpack-subscribe-label" for="subscribe-field-blog_subscription-3" style="clip: rect(1px, 1px, 1px, 1px); position: absolute; height: 1px; width: 1px; overflow: hidden;">
+							Email Address						</label>
+						<input type="email" name="email" required="required" class="required" value="" id="subscribe-field-blog_subscription-3" placeholder="Email Address">
+					</p>
+
+					<p id="subscribe-submit">
+						<input type="hidden" name="action" value="subscribe">
+						<input type="hidden" name="source" value="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/">
+						<input type="hidden" name="sub-type" value="widget">
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-3">
+												<input type="submit" value="Subscribe" name="jetpack_subscriptions_widget" class="btn btn-default">
+					</p>
+							</form>
+
+			<script>
+			/*
+			Custom functionality for safari and IE
+			 */
+			(function( d ) {
+				// In case the placeholder functionality is available we remove labels
+				if ( ( 'placeholder' in d.createElement( 'input' ) ) ) {
+					var label = d.querySelector( 'label[for=subscribe-field-blog_subscription-3]' );
+						label.style.clip 	 = 'rect(1px, 1px, 1px, 1px)';
+						label.style.position = 'absolute';
+						label.style.height   = '1px';
+						label.style.width    = '1px';
+						label.style.overflow = 'hidden';
+				}
+
+				// Make sure the email value is filled in before allowing submit
+				var form = d.getElementById('subscribe-blog-blog_subscription-3'),
+					input = d.getElementById('subscribe-field-blog_subscription-3'),
+					handler = function( event ) {
+						if ( '' === input.value ) {
+							input.focus();
+
+							if ( event.preventDefault ){
+								event.preventDefault();
+							}
+
+							return false;
+						}
+					};
+
+				if ( window.addEventListener ) {
+					form.addEventListener( 'submit', handler, false );
+				} else {
+					form.attachEvent( 'onsubmit', handler );
+				}
+			})( document );
+			</script>
+				
+</div>		</div><!-- .widget-area .second -->
+		
+				<div class="col-sm-4 footer-widget" role="complementary">
+			<div id="text-3" class="widget-odd widget-first widget-1 widget widget_text">			<div class="textwidget"><p style="font-family: &#39;Roboto Slab&#39;,serif;line-height:25px;font-size:25px;">
+<a href="https://www.talkingdotnet.com/contact-us/">Contact</a><br><br><a href="https://www.talkingdotnet.com/privacy-policy/">Privacy Policy </a>
+</p></div>
+		</div><div id="text-4" class="widget-even widget-last widget-2 follow_us widget widget_text"><h3 class="widgettitle">Follow US</h3>			<div class="textwidget"><div class="social-icons sticky-sidebar-social"> <nav id="menu-social" class="social-icons">
+<ul id="menu-social-items" class="social-menu"><li id="menu-item-2035" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2035"><a href="https://www.talkingdotnet.com/feed/"><i class="social_icon fa"><span>Feed</span></i></a></li>
+<li id="menu-item-2036" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2036"><a href="https://twitter.com/talkingdotnet" onclick="__gaTracker(\&#39;send\&#39;, \&#39;event\&#39;, \&#39;outbound-widget\&#39;, \&#39;https://twitter.com/talkingdotnet\&#39;, \&#39;Twitter\&#39;);">
+<i class="social_icon fa"><span>Twitter</span></i></a></li><li id="menu-item-2037" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2037"><a href="https://www.facebook.com/talkingdotnet" onclick="__gaTracker(\&#39;send\&#39;, \&#39;event\&#39;, \&#39;outbound-widget\&#39;, \&#39;https://www.facebook.com/talkingdotnet\&#39;, \&#39;Follow us on Facebook\&#39;);">
+<i class="social_icon fa"><span>Follow us on Facebook</span></i></a></li>
+<li id="menu-item-2039" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2039"><a href="https://plus.google.com/+Talkingdotnet/" onclick="__gaTracker(\&#39;send\&#39;, \&#39;event\&#39;, \&#39;outbound-widget\&#39;, \&#39;https://plus.google.com/+Talkingdotnet\&#39;, \&#39;Follow us on Google+\&#39;);">
+<i class="social_icon fa"><span>Follow us on Google+</span></i></a></li>
+<li id="menu-item-2039" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2040">
+<a href="https://www.pinterest.com/talkingdotnet/" onclick="__gaTracker(\&#39;send\&#39;, \&#39;event\&#39;, \&#39;outbound-widget\&#39;, \&#39;https://www.pinterest.com/talkingdotnet/\&#39;, \&#39;Follow us on Pinterest\&#39;);">
+<i class="social_icon fa"><span>Follow us on Google+</span></i></a></li></ul></nav></div></div>
+		</div>		</div><!-- .widget-area .third -->
+			</div>			</div>
+		</div>
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="site-info container">
+				<div class="row">
+										<nav role="navigation" class="col-md-6">
+											</nav>
+					<div class="copyright col-md-6">
+						sparkling						Theme by <a href="http://colorlib.com/" target="_blank">Colorlib</a> Powered by <a href="http://wordpress.org/" target="_blank">WordPress</a>					</div>
+				</div>
+			</div><!-- .site-info -->
+			<div class="scroll-to-top" style="display: block;"><i class="fa fa-angle-up"></i></div><!-- .scroll-to-top -->
+		</footer><!-- #colophon -->
+	</div>
+</div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/saved_resource(8).html"></iframe></ins></ins></ins><!-- #page -->
+
+  <script type="text/javascript">
+    jQuery( document ).ready( function( $ ){
+      if ( $( window ).width() >= 767 ){
+        $( '.navbar-nav > li.menu-item > a' ).click( function(){
+          window.location = $( this ).attr( 'href' );
+        });
+      }
+    });
+  </script>
+<script>
+    jQuery(document).ready(function () {
+		jQuery.post('https://www.talkingdotnet.com?ga_action=googleanalytics_get_script', {action: 'googleanalytics_get_script'}, function(response) {
+			var s = document.createElement("script");
+			s.type = "text/javascript";
+			s.innerHTML = response;
+			jQuery("head").append(s);
+		});
+    });
+</script>
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/www.talkingdotnet.com\/uploading-multiple-files-asp-net-core-razor-pages\/":5139};
+	</script>
+	
+		<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-telegram' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtelegram', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+		});
+		</script>
+						<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-linkedin' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-skype' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomskype', 'menubar=1,resizable=1,width=305,height=665' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-pocket' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcompocket', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-tumblr' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtumblr', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		</script>
+		<script>if (document.location.protocol != "https:") {document.location = document.URL.replace(/^http:/i, "https:");}</script><script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/shCore.js.ดาวน์โหลด"></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/shBrushCSharp.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://www.talkingdotnet.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "https://www.talkingdotnet.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeEmacs.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+
+	// Infinite scroll support
+	if ( typeof( jQuery ) !== 'undefined' ) {
+		jQuery( function( $ ) {
+			$( document.body ).on( 'post-load', function() {
+				SyntaxHighlighter.highlight();
+			} );
+		} );
+	}
+</script>
+<!-- `jetpack-subscriptions` is included in the concatenated jetpack.css -->
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/jquery.tagcanvas.min.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/wpctc.tagcanvas.min.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/jquery.style.min.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/wp-category-tag-cloud.min.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/devicepx-jetpack.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/skip-link-focus-fix.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/comment-reply.min.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/jquery.sonar.min.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/lazy-load.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/new-tab.min.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/wp-embed.min.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/sharing.js.ดาวน์โหลด" defer="" onload=""></script>
+<script type="text/javascript" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/e-201915.js.ดาวน์โหลด" async="" defer=""></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:4.1.1',blog:'103976763',post:'5139',tz:'5.5',srv:'www.talkingdotnet.com'} ]);
+	_stq.push([ 'clickTrackerInit', '103976763', '5139' ]);
+</script>
+
+
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Object Caching 128/164 objects using disk
+Page Caching using disk: enhanced 
+Minified using disk
+Database Caching 3/32 queries in 0.015 seconds using disk
+
+Served from: www.talkingdotnet.com @ 2019-04-08 09:01:04 by W3 Total Cache
+--><img src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/g.gif" alt=":)" width="6" height="5" id="wpstats"><iframe src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/portal.html" id="st_gdpr_iframe" style="width: 0px; height: 0px; position: absolute; left: -5000px;"></iframe><iframe id="google_osd_static_frame_7553262877931" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/saved_resource(9).html"></iframe><div id="sharing_email" style="display: none;">
+		<form action="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="email" name="target_email" id="target_email" value="">
+
+			
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="">
+
+				<label for="source_email">Your Email Address</label>
+				<input type="email" name="source_email" id="source_email" value="">
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off">
+			<script> document.getElementById('jetpack-source_f_name').value = ''; </script>
+			
+			<img style="float: right; display: none" class="loading" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/loading.gif" alt="loading" width="16" height="16">
+			<input type="submit" value="Send Email" class="sharing_send btn btn-default">
+			<a rel="nofollow" href="https://www.talkingdotnet.com/uploading-multiple-files-asp-net-core-razor-pages/#cancel" class="sharing_cancel">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div></body><iframe id="google_shimpl" style="display: none;" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/saved_resource(10).html"></iframe><iframe id="google_esf" name="google_esf" src="./Uploading Multiple Files in ASP.NET Core Razor Pages_files/zrt_lookup.html" data-ad-client="ca-pub-4919054269980932" style="display: none;"></iframe></html>
